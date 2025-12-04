@@ -1,41 +1,43 @@
-% content/part1_problem.tex
-
-\begin{frame}{Gauge symmetry vs.\ mass}
+\begin{frame}{Why is mass a problem?}
   \centering
-  \Large
-  Gauge symmetry forbids mass terms.
-  
-  \vspace{1em}
+  Gauge theories prefer massless fields.
+  Yet nature gives $W$, $Z$, and fermions mass.
+  Where does mass fit without breaking symmetry?
+\end{frame}
+
+\begin{frame}{Gauge bosons and symmetry}
+  \centering
+  Yang--Mills kinetic term keeps the gauge symmetry.
   \[
-    \lag_{\text{gauge}} = -\frac{1}{4} W_{\mu\nu} W^{\mu\nu}
-    \quad\Rightarrow\quad m_W = 0
+    \mathcal{L}_{\text{YM}} = -\frac{1}{4} F_{\mu\nu}^a F^{a\,\mu\nu}
   \]
+  Symmetry protects masslessness.
 \end{frame}
 
-\begin{frame}{But experiments disagree}
+\begin{frame}{The forbidden mass term}
   \centering
-  \Large
-  We measure massive $W$ and $Z$ bosons.
-  
-  \vspace{1em}
-  \Large
-  Theory says: \emph{no mass}. \\
-  Experiments say: \emph{big mass}.
+  \[
+    \mathcal{L}_{\text{Proca}} = \frac{1}{2} m^2 A_\mu A^\mu
+  \]
+  This term breaks gauge invariance.
 \end{frame}
 
-\begin{cleanframe}
+\begin{frame}{Fermion mass trouble}
   \centering
-  \Huge
-  Adding mass by hand breaks the theory.
-\end{cleanframe}
+  \[
+    \mathcal{L}_{\text{Dirac}} = -m \overline{\psi}\, \psi
+  \]
+  Left and right chiralities transform differently under $SU(2)\times U(1)$.
+\end{frame}
 
-\begin{frame}{The crisis}
+\begin{frame}{The conflict}
   \centering
-  \Large
-  Naive mass terms destroy gauge symmetry, \\
-  renormalizability, and predictivity.
+  Gauge symmetry forbids naive mass.
+  Experiments require massive $W$, $Z$, and fermions.
+  A new idea is needed.
+\end{frame}
 
-  \vspace{1em}
-  \Large
-  How can a gauge theory have massive bosons?
+\begin{frame}{A clue: symmetry can hide itself}
+  \centering
+  Mass may emerge when symmetry is broken spontaneously.
 \end{frame}
