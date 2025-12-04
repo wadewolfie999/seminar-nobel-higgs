@@ -1,54 +1,50 @@
-% content/part3_higgsfield.tex
-
-\begin{frame}{The Mexican hat}
-  \centering
-  \input{figures/higgs_potential_small.tikz}
-
-  \vspace{0.4em}
-  \small
-  $V(\phi)=\lambda\bigl(|\phi|^2 - v^2\bigr)^2$\\[0.3em]
-  Continuum of minima at $\vev{\Phi} \neq 0$.
+\begin{frame}{A field that fills space}
+\centering
+Higgs field: complex SU(2) doublet $\Phi = (\phi^+,\,\phi^0)^T$.
+Introduced to endow gauge bosons with mass while keeping gauge symmetry.
 \end{frame}
 
-\begin{frame}{Choosing a vacuum}
-  \centering
-  \Large
-  Choose one vacuum direction:
-  \[
-    \Phi(x) =
-    \frac{1}{\sqrt{2}}
-    \begin{pmatrix}
-      0 \\
-      v + h(x)
-    \end{pmatrix}
-  \]
-  
-  \vspace{0.5em}
-  \Large
-  The symmetry of the equations survives; \\
-  the symmetry of the vacuum does not.
+\begin{frame}{Choosing the Vacuum}
+\centering
+$\langle \Phi \rangle = \begin{pmatrix} 0 \\ v/\sqrt{2} \end{pmatrix}$ selects one direction.
+\vspace{0.6em}
+\input{figures/higgs_potential_small.tikz}
+\vspace{0.4em}
+Symmetry of the laws persists; the vacuum hides it.
 \end{frame}
 
-\begin{frame}{Gauge boson masses from the vacuum}
-  \centering
-  \Large
-  Gauge fields eat Goldstone modes and become massive:
-  \[
-    m_W = \tfrac{1}{2} g v,
-    \qquad
-    m_Z = \tfrac{1}{2} \sqrt{g^2 + g'^2}\, v
-  \]
-  
-  \vspace{0.5em}
-  \Large
-  Mass comes from interaction with an always-on field.
+\begin{frame}{Gauge Boson Masses}
+\centering
+Gauge fields absorb Goldstone modes and become massive.
+\[
+ m_W = \tfrac{g v}{2}, \qquad m_Z = \tfrac{v}{2}\sqrt{g^2 + g'^2}
+\]
+Mass arises from interacting with the constant Higgs background.
 \end{frame}
 
-\begin{frame}{The Higgs boson}
-  \centering
-  \Large
-  $h(x)$ is a real scalar excitation of the Higgs field. \\
-  \vspace{0.5em}
-  \Large
-  A vibration of the vacuum itself.
+\begin{frame}{Fermion Masses}
+\centering
+Yukawa term: $-y_f\, \bar{\psi}_L \Phi \psi_R + \text{h.c.}$
+VEV turns Yukawa coupling into mass.
+\[
+ m_f = \dfrac{y_f v}{\sqrt{2}}
+\]
+\end{frame}
+
+\begin{frame}{One Scalar Remains}
+\centering
+After symmetry breaking, three Goldstone modes are eaten.
+A single physical excitation survives: the Higgs boson $h$.
+\end{frame}
+
+\begin{frame}{Why This Matters Experimentally}
+\centering
+Predicts a new scalar with couplings set by mass relations.
+Its mass and decay patterns define experimental searches.
+\end{frame}
+
+\begin{frame}{Can we see the Higgs?}
+\centering
+The field shapes masses; its quantum could appear in detectors.
+Next: the Discovery Arc and the 2012 observation.
 \end{frame}
