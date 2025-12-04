@@ -20,6 +20,57 @@
 % --------------------------------
 %        DOCUMENT
 % --------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Higgs seminar slide layout macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Vertical gap macro for consistent rhythm
+\newcommand{\slidegap}{\vspace{0.7em}}
+
+% Single centered phrase, tuned for minimal-text slides
+\newcommand{\slidephrase}[1]{%
+  \par\slidegap
+  \begin{center}\Large #1\end{center}%
+  \slidegap\par
+}
+
+% Smaller sub-phrase (e.g. second or third line)
+\newcommand{\slidesubphrase}[1]{%
+  \par\slidegap
+  \begin{center}\normalsize #1\end{center}%
+  \par
+}
+
+% Equation block with symmetric spacing
+\newcommand{\slideeq}[1]{%
+  \par\slidegap
+  \[
+    #1
+  \]
+  \slidegap\par
+}
+
+% Standardized figure block (e.g. discovery plots)
+\newcommand{\slidefigure}[2][0.8]{%
+  \par\slidegap
+  \begin{center}
+    \includegraphics[width=#1\linewidth]{#2}
+  \end{center}
+  \par
+}
+
+% Two-line “tension” structure: statement + consequence
+\newcommand{\slidetension}[2]{%
+  \par\slidegap
+  \begin{center}
+    \Large #1\\[0.9em]
+    \normalsize #2
+  \end{center}
+  \slidegap\par
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 % ---------- Title Page ----------
