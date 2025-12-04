@@ -1,0 +1,49 @@
+% ===============================
+%   Higgs Mechanism Seminar
+%   main.tex  (in slides/)
+% ===============================
+
+\documentclass{beamer}
+
+% Preamble with theme, packages, macros
+\input{preamble}
+
+% --------------------------------
+%        METADATA
+% --------------------------------
+\title[Higgs Mechanism]{The Higgs Mechanism and the Origin of Mass}
+\subtitle{2013 Nobel Prize in Physics}
+\author{Vahid Gorgin}
+\institute{[Your University / Department]}
+\date{\today}
+
+% --------------------------------
+%        DOCUMENT
+% --------------------------------
+\begin{document}
+
+% ---------- Title Page ----------
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% ---------- Optional Outline (can remove later) ----------
+% \begin{frame}{Roadmap}
+%   \tableofcontents
+% \end{frame}
+
+% ---------- Content ----------
+\input{content/titlepage}              % cold open / hook, if you separate it
+\input{content/part1_problem}          % "Why do particles have mass?" + conflict
+\input{content/part2_symmetrybreaking} % gauge symmetry vs mass; crisis
+\input{content/part3_higgsfield}       % Higgs field, potential, SSB
+\input{content/part4_discovery}        % LHC, 125 GeV discovery
+\input{content/part5_phenomenology}    % extended Higgs, open questions
+\input{content/ending}                 % final punchline + thank you
+
+% ---------- Bibliography (if you want a refs slide) ----------
+\begin{frame}[allowframebreaks]{References}
+  \printbibliography
+\end{frame}
+
+\end{document}

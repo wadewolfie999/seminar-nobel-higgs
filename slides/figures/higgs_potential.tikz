@@ -1,0 +1,64 @@
+% seminar/slides/figures/higgs_potential.tikz
+%
+% Minimalist Higgs "Mexican hat" potential
+% Requires: \usepackage{tikz}, \usepackage{pgfplots}
+% Optional accent color: myblue (already defined in your theme)
+
+\begin{tikzpicture}
+  \begin{axis}[
+    view={55}{35},
+    axis lines=none,
+    ticks=none,
+    clip=false,
+    domain=0:1.8,
+    y domain=0:360,
+    samples=35,
+    samples y=45,
+    z buffer=sort,
+    zmax=1.8,
+    xlabel={$\,\Re\phi$},
+    ylabel={$\,\Im\phi$},
+    zlabel={$V(\phi)$},
+    xlabel style={font=\footnotesize},
+    ylabel style={font=\footnotesize},
+    zlabel style={font=\footnotesize},
+  ]
+
+    % Mexican hat surface: V(r) = (r^2 - 1)^2 (in units where λ = 1, v = 1)
+    \addplot3[
+      surf,
+      shader=interp,
+      opacity=0.95,
+      draw=black!30,
+      fill=myblue!35,
+    ]
+    ({x*cos(y)},{x*sin(y)},{(x^2 - 1)^2});
+
+    % Circle of minima at r = v = 1, V = 0
+    \addplot3[
+      very thick,
+      myblue,
+      domain=0:360,
+      samples=100,
+    ]
+    ({1*cos(x)},{1*sin(x)},{0});
+
+    % Small marker for a chosen vacuum point
+    \addplot3[
+      mark=*,
+      mark size=1.2pt,
+      myblue!80,
+    ]
+    coordinates {(1,0,0)};
+
+    % Annotations inside the axis (relative coordinates)
+    \node[anchor=north west, font=\scriptsize]
+      at (rel axis cs:0.02,0.98)
+      {$V(\phi) = \lambda\bigl(|\phi|^{2} - v^{2}\bigr)^{2}$};
+
+    \node[anchor=north west, font=\scriptsize]
+      at (rel axis cs:0.02,0.88)
+      {degenerate minima: $|\phi| = v$};
+
+  \end{axis}
+\end{tikzpicture}

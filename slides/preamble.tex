@@ -1,0 +1,145 @@
+% ===============================
+%        PREAMBLE FOR BEAMER
+% ===============================
+
+% -------------------------------
+%         DOCUMENT SETTINGS
+% -------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}               % Clean font
+\usepackage{microtype}             % Better typography
+\usepackage[english]{babel}  
+\usepackage{csquotes}
+
+% -------------------------------
+%             BEAMER
+% -------------------------------
+\mode<presentation>{
+  \usetheme{default}               % clean base; editable later
+  \usecolortheme{dove}             % minimalistic greyscale
+  \setbeamertemplate{navigation symbols}{}      % remove nav buttons
+  \setbeamertemplate{footline}[frame number]    % tiny frame # only
+  \setbeamertemplate{caption}[numbered]
+}
+
+% Make colors subtle and modern
+\definecolor{myblue}{HTML}{1B63A6}
+\definecolor{myred}{HTML}{C0392B}
+\definecolor{mygreen}{HTML}{27AE60}
+
+\setbeamercolor{structure}{fg=myblue}
+\setbeamercolor{title}{fg=myblue}
+\setbeamercolor{frametitle}{fg=myblue}
+
+% -------------------------------
+%              MATH
+% -------------------------------
+\usepackage{amsmath, amsfonts, amssymb, bm}
+\usepackage{mathtools}
+\usepackage{physics}               % bra-ket, \dv, \pdv, \comm etc.
+\usepackage{tensor}                % index notation
+\usepackage{siunitx}               % units
+\sisetup{detect-all}
+
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+
+% Useful math macros
+\newcommand{\lag}{\mathcal{L}}
+\providecommand{\vev}[1]{\langle #1 \rangle}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\U}{\mathrm{U}}
+
+% -------------------------------
+%          TIKZ + GRAPHICS
+% -------------------------------
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, calc, patterns, decorations.markings}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}         % images live here
+
+% Improved figure alignment
+\setlength{\tabcolsep}{4pt}
+
+% -------------------------------
+%          BIBLIOGRAPHY
+% -------------------------------
+\usepackage{biblatex}
+\addbibresource{../bibliography.bib}
+
+% -------------------------------
+%        ITEMIZE & SPACING
+% -------------------------------
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+
+\setbeamertemplate{itemize item}{\color{myblue}●}
+\setbeamertemplate{itemize subitem}{\color{myblue}–}
+
+% -------------------------------
+%      TITLE & SECTION STYLE
+% -------------------------------
+\setbeamerfont{frametitle}{size=\Large}
+\setbeamerfont{title}{size=\Huge,series=\bfseries}
+\setbeamerfont{subtitle}{size=\large}
+
+% Center frametitles
+\setbeamertemplate{frametitle}{
+  \begin{centering}
+    \vspace{3mm}
+    \textbf{\insertframetitle}
+    \par
+  \end{centering}
+}
+
+% -------------------------------
+%   FULLSCREEN IMAGES (key for minimal words)
+% -------------------------------
+\newcommand{\fullimage}[1]{
+  {
+    \usebackgroundtemplate{\includegraphics[width=\paperwidth]{#1}}
+    \begin{frame}[plain]{}
+    \end{frame}
+    \usebackgroundtemplate{} % reset
+  }
+}
+
+% -------------------------------
+%   CLEAN SLIDE (no frame title)
+% -------------------------------
+\newenvironment{cleanframe}{
+  \setbeamertemplate{frametitle}{}
+  \begin{frame}
+}{
+  \end{frame}
+  \setbeamertemplate{frametitle}{
+    \begin{centering}
+      \vspace{3mm}
+      \textbf{\insertframetitle}
+      \par
+    \end{centering}
+  }
+}
+
+% -------------------------------
+%  TITLE PAGE LOOK
+% -------------------------------
+\defbeamertemplate*{title page}{custom}{
+  \begin{centering}
+    \vspace{2cm}
+    {\Huge\bfseries \inserttitle \par}
+    \vspace{0.4cm}
+    {\large \insertsubtitle \par}
+    \vspace{0.7cm}
+    {\normalsize \insertauthor \par}
+    \vspace{0.3cm}
+    {\small \insertinstitute \par}
+    \vspace{0.3cm}
+    {\small \insertdate \par}
+  \end{centering}
+}
+\setbeamertemplate{title page}[custom]
+

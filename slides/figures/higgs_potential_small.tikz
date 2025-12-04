@@ -1,0 +1,55 @@
+% Compact Mexican Hat Potential for Beamer
+% This version is smaller by construction (width & height inside axis)
+% and does not need any resizebox in the frame.
+
+\begin{tikzpicture}
+  \begin{axis}[
+    width=0.65\textwidth,
+    height=0.45\textwidth,
+    view={50}{35},
+    axis lines=none,
+    ticks=none,
+    clip=false,
+    domain=0:1.6,
+    y domain=0:360,
+    samples=28,
+    samples y=36,
+    z buffer=sort,
+    zmax=1.4,
+    xlabel={$\Re\phi$},
+    ylabel={$\Im\phi$},
+    zlabel={$V(\phi)$},
+    xlabel style={font=\scriptsize},
+    ylabel style={font=\scriptsize},
+    zlabel style={font=\scriptsize},
+  ]
+
+    % Mexican hat surface: scaled down
+    \addplot3[
+      surf,
+      shader=interp,
+      opacity=0.95,
+      draw=black!20,
+      fill=myblue!30,
+    ]
+    ({x*cos(y)},{x*sin(y)},{(x^2 - 1)^2});
+
+    % Circle of minima
+    \addplot3[
+      thick,
+      myblue,
+      domain=0:360,
+      samples=100,
+    ]
+    ({1*cos(x)},{1*sin(x)},{0});
+
+    % Mark one vacuum point
+    \addplot3[
+      mark=*,
+      mark size=1pt,
+      myblue!70,
+    ]
+    coordinates {(1,0,0)};
+
+  \end{axis}
+\end{tikzpicture}
