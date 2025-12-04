@@ -1,29 +1,45 @@
-% content/part2_symmetrybreaking.tex
-
-\begin{cleanframe}
+\begin{frame}{A symmetry… but a broken ground state}
   \centering
-  \Huge
-  What if the symmetry is hidden, not broken by hand?
-\end{cleanframe}
-
-\begin{frame}{Symmetry in the equations, not in the vacuum}
-  \centering
-  \Large
-  Keep the Lagrangian symmetric. \\
-  Let the vacuum pick a direction.
-  
-  \vspace{1em}
-  \Large
-  \emph{Spontaneous symmetry breaking.}
+  Symmetric equations.
+  Ground state refuses the symmetry.
+  Conflict begins.
 \end{frame}
 
-\begin{frame}{The Higgs field idea}
+\begin{frame}{A Simple Scalar Field}
   \centering
-  \Large
-  Introduce a complex scalar doublet $\Phi$ with potential
+  Complex scalar field with symmetric dynamics.
   \[
-    V(\Phi) = \mu^2 \Phi^\dagger \Phi + \lambda (\Phi^\dagger \Phi)^2
+    \mathcal{L} = \partial_\mu \phi^* \partial^\mu \phi - \mu^2 |\phi|^2 - \lambda |\phi|^4
   \]
-  \vspace{0.5em}
-  Choose $\mu^2 < 0$ \textrightarrow\ the vacuum is not at $\Phi = 0$.
+\end{frame}
+
+\begin{frame}{The Potential}
+  \centering
+  \[
+    V(\phi) = \mu^2 |\phi|^2 + \lambda |\phi|^4
+  \]
+  If $\mu^2 < 0$, the minimum lies away from $\phi = 0$.
+\end{frame}
+
+\begin{frame}{Choosing a Vacuum}
+  \centering
+  The vacuum picks a direction in field space.
+  The symmetry is hidden, not destroyed.
+\end{frame}
+
+\begin{frame}{Goldstone Modes}
+  \centering
+  Breaking a continuous symmetry creates massless excitations along the flat directions.
+  Goldstone theorem at work.
+\end{frame}
+
+\begin{frame}{Toward Massive Gauge Bosons}
+  \centering
+  Gauge fields can absorb Goldstone modes.
+  Hidden symmetry gives mass to vector bosons.
+\end{frame}
+
+\begin{frame}{Enter the Higgs Field}
+  \centering
+  Next: build the electroweak story where the Higgs field completes mass generation.
 \end{frame}
