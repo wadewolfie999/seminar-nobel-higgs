@@ -70,7 +70,10 @@
   \slidegap\par
 }
 
-% Section divider frame with subtle guides
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section divider macro with improved title-subtitle spacing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \newcommand{\sectiondivider}[2]{%
   \begin{frame}[plain]
     \centering
@@ -80,8 +83,8 @@
       \draw[gray!45, line width=0.6pt] (-0.55\paperwidth,-0.7) -- (0.55\paperwidth,-0.7);
       \fill[gray!10, rounded corners=3pt] (-0.4\paperwidth,-0.38) rectangle (0.4\paperwidth,0.38);
       \draw[myblue, line width=0.7pt, rounded corners=3pt] (-0.4\paperwidth,-0.38) rectangle (0.4\paperwidth,0.38);
-      \node[align=center] at (0,0.12) {\Large\bfseries #1};
-      \node[align=center,color=gray!70] at (0,-0.18) {\small #2};
+      \node[align=center] at (0,0.18) {\Large\bfseries #1};  % Adjusted title position
+      \node[align=center,color=gray!70] at (0,-0.22) {\small #2};  % Adjusted subtitle position
     \end{tikzpicture}
     \vfill
   \end{frame}
