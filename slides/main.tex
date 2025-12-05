@@ -26,27 +26,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Vertical gap macro for consistent rhythm
-\newcommand{\slidegap}{\vspace{0.6em plus 0.25em minus 0.2em}}
+\newcommand{\slidegap}{\vspace{1.05em plus 0.35em minus 0.3em}}
 
 % Single centered phrase, tuned for minimal-text slides
 \newcommand{\slidephrase}[1]{%
   \par\slidegap
-  \begin{center}\large #1\end{center}%
+  \begin{center}{\Large\bfseries\color{black!90} #1}\end{center}%
   \slidegap\par
 }
 
 % Smaller sub-phrase (e.g. second or third line)
 \newcommand{\slidesubphrase}[1]{%
   \par\slidegap
-  \begin{center}\normalsize #1\end{center}%
+  \begin{center}{\small\color{gray!60} #1}\end{center}%
   \par
 }
 
 % Equation block with symmetric spacing
 \newcommand{\slideeq}[1]{%
   \par\slidegap
-  {\setlength{\abovedisplayskip}{6pt plus 3pt minus 2pt}%
-   \setlength{\belowdisplayskip}{6pt plus 3pt minus 2pt}%
+  {\setlength{\abovedisplayskip}{8pt plus 3pt minus 2pt}%
+   \setlength{\belowdisplayskip}{8pt plus 3pt minus 2pt}%
+   \setlength{\abovedisplayshortskip}{6pt plus 2pt minus 2pt}%
+   \setlength{\belowdisplayshortskip}{6pt plus 2pt minus 2pt}%
    \[
      #1
    \]}
@@ -54,20 +56,20 @@
 }
 
 % Standardized figure block (e.g. discovery plots)
-\newcommand{\slidefigure}[2][0.82]{%
-  \par\vspace{0.35em plus 0.25em minus 0.15em}
+\newcommand{\slidefigure}[2][0.78]{%
+  \par\vspace{0.55em plus 0.25em minus 0.2em}
   \begin{center}
     \includegraphics[width=#1\linewidth]{#2}
   \end{center}
-  \vspace{0.5em plus 0.3em minus 0.2em}\par
+  \vspace{0.75em plus 0.35em minus 0.25em}\par
 }
 
 % Two-line “tension” structure: statement + consequence
 \newcommand{\slidetension}[2]{%
   \par\slidegap
   \begin{center}
-    \large #1\\[0.65em]
-    \normalsize #2
+    {\Large\bfseries\color{black!90} #1}\\[0.7em]
+    {\small\color{gray!60} #2}
   \end{center}
   \slidegap\par
 }
@@ -81,15 +83,11 @@
     \centering
     \vfill
     \begin{tikzpicture}[line cap=round]
-      % Increase spacing between lines
-      \draw[gray!45, line width=0.6pt] (-0.55\paperwidth,0.85) -- (0.55\paperwidth,0.85);  % Adjusted line position
-      \draw[gray!45, line width=0.6pt] (-0.55\paperwidth,-0.85) -- (0.55\paperwidth,-0.85);  % Adjusted line position
-      \fill[gray!10, rounded corners=4pt] (-0.5\paperwidth,-0.5) rectangle (0.6\paperwidth,0.6);  % Adjusted box height
-      \draw[myblue, line width=0.7pt, rounded corners=4pt] (-0.5\paperwidth,-0.5) rectangle (0.6\paperwidth,0.6);  % Adjusted box height
-
-      % Adjust title and subtitle positions to prevent overlap
-      \node[align=center] at (0,0.25) {\Large\bfseries #1};  % Adjusted title position (increased vertical space)
-      \node[align=center,color=gray!70] at (0,-0.25) {\small #2};  % Adjusted subtitle position (increased vertical space)
+      \fill[gray!6, rounded corners=5pt] (-0.5\paperwidth,-0.52) rectangle (0.5\paperwidth,0.52);
+      \draw[gray!30, line width=0.6pt, rounded corners=5pt] (-0.5\paperwidth,-0.52) rectangle (0.5\paperwidth,0.52);
+      \draw[myblue, line width=0.8pt] (-0.42\paperwidth,0.18) -- (0.42\paperwidth,0.18);
+      \node[align=center] at (0,0.32) {\Large\bfseries\color{myblue} #1};
+      \node[align=center,color=gray!65] at (0,-0.08) {\small #2};
     \end{tikzpicture}
     \vfill
   \end{frame}

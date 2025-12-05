@@ -9,8 +9,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}               % Clean font
 \usepackage{microtype}             % Better typography
-\usepackage[english]{babel}  
+\usefonttheme{professionalfonts}
+\usepackage[english]{babel}
 \usepackage{csquotes}
+\usepackage{ragged2e}
 
 % -------------------------------
 %             BEAMER
@@ -28,9 +30,12 @@
 \definecolor{myred}{HTML}{C0392B}
 \definecolor{mygreen}{HTML}{27AE60}
 
+\setbeamercolor{normal text}{fg=black!92,bg=white}
 \setbeamercolor{structure}{fg=myblue}
 \setbeamercolor{title}{fg=myblue}
 \setbeamercolor{frametitle}{fg=myblue}
+\setbeamercolor{subtitle}{fg=gray!65}
+\setbeamercolor{background canvas}{bg=white}
 
 % -------------------------------
 %              MATH
@@ -73,7 +78,8 @@
 % -------------------------------
 %        ITEMIZE & SPACING
 % -------------------------------
-\setlength{\parskip}{3pt plus 1pt minus 1pt}
+\linespread{1.05}
+\setlength{\parskip}{5pt plus 1pt minus 1pt}
 \setlength{\parindent}{0pt}
 
 \setbeamertemplate{itemize item}{\color{myblue}\textbullet}
@@ -82,17 +88,20 @@
 % -------------------------------
 %      TITLE & SECTION STYLE
 % -------------------------------
-\setbeamerfont{frametitle}{size=\large}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
 \setbeamerfont{title}{size=\Huge,series=\bfseries}
-\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{subtitle}{size=\normalsize,series=\mdseries}
+\setbeamerfont{framesubtitle}{size=\normalsize,series=\mdseries}
+\setbeamersize{text margin left=16mm,text margin right=16mm}
 
 % Center frametitles
 \setbeamertemplate{frametitle}{
-  \begin{centering}
-    \vspace{2mm plus 1mm minus 0.5mm}
-    \textbf{\insertframetitle}
-    \par
-  \end{centering}
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,center]{frametitle}
+    \vspace{3mm plus 1mm minus 0.5mm}
+    \parbox{0.9\paperwidth}{\centering\usebeamerfont{frametitle}\color{myblue}\insertframetitle\par}
+    \vspace{0.75mm}
+  \end{beamercolorbox}
 }
 
 % -------------------------------
@@ -116,11 +125,12 @@
 }{
   \end{frame}
   \setbeamertemplate{frametitle}{
-    \begin{centering}
-      \vspace{3mm}
-      \textbf{\insertframetitle}
-      \par
-    \end{centering}
+    \nointerlineskip
+    \begin{beamercolorbox}[wd=\paperwidth,center]{frametitle}
+      \vspace{3mm plus 1mm minus 0.5mm}
+      \parbox{0.9\paperwidth}{\centering\usebeamerfont{frametitle}\color{myblue}\insertframetitle\par}
+      \vspace{0.75mm}
+    \end{beamercolorbox}
   }
 }
 
@@ -130,18 +140,18 @@
 \defbeamertemplate*{title page}{custom}{
   \begin{centering}
     \vspace{1.6cm}
-    {\color{myblue}\rule{0.7\paperwidth}{0.5pt} \par}
-    \vspace{0.6cm}
-    {\Huge\bfseries \inserttitle \par}
-    \vspace{0.25cm}
-    {\large \insertsubtitle \par}
+    {\color{myblue}\rule{0.72\paperwidth}{0.5pt} \par}
     \vspace{0.55cm}
+    {\color{myblue}{\Huge\bfseries \inserttitle} \par}
+    \vspace{0.3cm}
+    {\large\color{gray!65} \insertsubtitle \par}
+    \vspace{0.6cm}
     {\normalsize \insertauthor \par}
     {\small \insertinstitute \par}
     \vspace{0.35cm}
     {\scriptsize \insertdate \par}
-    \vspace{0.45cm}
-    {\color{myblue}\rule{0.7\paperwidth}{0.5pt} \par}
+    \vspace{0.55cm}
+    {\color{myblue}\rule{0.72\paperwidth}{0.5pt} \par}
   \end{centering}
 }
 \setbeamertemplate{title page}[custom]
