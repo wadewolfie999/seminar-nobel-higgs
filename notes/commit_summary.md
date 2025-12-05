@@ -1,0 +1,186 @@
+## Section: Mixed components
+
+- **Subtask:** Expand recent changes summary
+  - **Intention:** Expand recent changes summary
+  - **Code Changes Snippet:**
+    ```
+    diff --git a/bibliography.bib b/bibliography.bib
+    index ccf3174..b7adfb0 100644
+    --- a/bibliography.bib
+    +++ b/bibliography.bib
+    @@ -12,6 +12,26 @@
+       publisher = {Cambridge University Press}
+     }
+     
+    +@article{englert_brout_1964,
+    +  author  = {Englert, Francois and Brout, Robert},
+    +  title   = {Broken Symmetry and the Mass of Gauge Vector Mesons},
+    +  journal = {Physical Review Letters},
+    +  year    = {1964},
+    +  volume  = {13},
+    ```
+  - **Commit Message:** `5958c8b8d831bdf235c3d0061148b57c127b5265` Expand recent changes summary
+
+
+## Section: General / Metadata
+
+- **Subtask:** Merge pull request #15 from wadewolfie999/codex/enhance-seminar-presentation-slides
+  - **Intention:** Merge pull request #15 from wadewolfie999/codex/enhance-seminar-presentation-slides
+  - **Code Changes Snippet:**
+    ```
+    (No diff available)
+    ```
+  - **Commit Message:** `bf4c1ee53f1de44ef664a53f22e2de888d856727` Merge pull request #15 from wadewolfie999/codex/enhance-seminar-presentation-slides
+
+- **Subtask:** Merge pull request #14 from wadewolfie999/codex/add-visual-divider-frames-to-slides
+  - **Intention:** Merge pull request #14 from wadewolfie999/codex/add-visual-divider-frames-to-slides
+  - **Code Changes Snippet:**
+    ```
+    (No diff available)
+    ```
+  - **Commit Message:** `008af4cd58e747955aa70e4cab7751c15d0326a1` Merge pull request #14 from wadewolfie999/codex/add-visual-divider-frames-to-slides
+
+- **Subtask:** Merge pull request #13 from wadewolfie999/codex/add-reusable-layout-macros-to-main.tex-mh8pwr
+  - **Intention:** Merge pull request #13 from wadewolfie999/codex/add-reusable-layout-macros-to-main.tex-mh8pwr
+  - **Code Changes Snippet:**
+    ```
+    (No diff available)
+    ```
+  - **Commit Message:** `e3a6ab9e540737d5aab5fafbe65a0658871c5a07` Merge pull request #13 from wadewolfie999/codex/add-reusable-layout-macros-to-main.tex-mh8pwr
+
+- **Subtask:** Merge pull request #12 from wadewolfie999/codex/add-reusable-layout-macros-to-main.tex
+  - **Intention:** Merge pull request #12 from wadewolfie999/codex/add-reusable-layout-macros-to-main.tex
+  - **Code Changes Snippet:**
+    ```
+    (No diff available)
+    ```
+  - **Commit Message:** `3d5e5a9ddbb1865aaf8f2aa11c67e76f36ec3dc8` Merge pull request #12 from wadewolfie999/codex/add-reusable-layout-macros-to-main.tex
+
+- **Subtask:** Merge pull request #11 from wadewolfie999/codex/create-seminar-outline-in-markdown-format-uyk7gv
+  - **Intention:** Merge pull request #11 from wadewolfie999/codex/create-seminar-outline-in-markdown-format-uyk7gv
+  - **Code Changes Snippet:**
+    ```
+    (No diff available)
+    ```
+  - **Commit Message:** `3615efe8329eb2f4e1fdab2ea9b44747a8c10a0b` Merge pull request #11 from wadewolfie999/codex/create-seminar-outline-in-markdown-format-uyk7gv
+
+
+## Section: slides
+
+- **Subtask:** Enhance narrative flow of Higgs seminar
+  - **Intention:** Enhance narrative flow of Higgs seminar
+  - **Code Changes Snippet:**
+    ```
+    diff --git a/slides/content/ending.tex b/slides/content/ending.tex
+    index 54d6f60..6e2bc6b 100644
+    --- a/slides/content/ending.tex
+    +++ b/slides/content/ending.tex
+    @@ -1,13 +1,29 @@
+     % content/ending.tex
+     
+     \begin{cleanframe}
+    -  \slidephrase{The Higgs solved one mystery.}
+    -  \slidesubphrase{It also opened many more.}
+    +  \slidephrase{A hidden field became a discovered particle.}
+    +  \slidesubphrase{Decades of tension collapsed into a 125 GeV signal.}
+     \end{cleanframe}
+     
+    ```
+  - **Commit Message:** `fab762a4d6d5e2d276d014158289d2f4047423e3` Enhance narrative flow of Higgs seminar
+
+- **Subtask:** Add section dividers and refine slide layouts
+  - **Intention:** Add section dividers and refine slide layouts
+  - **Code Changes Snippet:**
+    ```
+    diff --git a/slides/content/ending.tex b/slides/content/ending.tex
+    index 7da429e..54d6f60 100644
+    --- a/slides/content/ending.tex
+    +++ b/slides/content/ending.tex
+    @@ -1,28 +1,16 @@
+     % content/ending.tex
+     
+     \begin{cleanframe}
+    -  \centering
+    -  \Huge
+    -  The Higgs solved one mystery \\
+    -  and opened many more.
+    +  \slidephrase{The Higgs solved one mystery.}
+    +  \slidesubphrase{It also opened many more.}
+    ```
+  - **Commit Message:** `3fa7e8e32905fb1ecfe8fb59375ef9f376e87e36` Add section dividers and refine slide layouts
+
+- **Subtask:** Fix minor text-width issue
+  - **Intention:** Fix minor text-width issue
+  - **Code Changes Snippet:**
+    ```
+    diff --git a/slides/build/main.pdf b/slides/build/main.pdf
+    index 88e14cd..1ceb20a 100644
+    Binary files a/slides/build/main.pdf and b/slides/build/main.pdf differ
+    ```
+  - **Commit Message:** `d8eee7ddf6153c6b81780c2d931003faec1288b5` Fix minor text-width issue
+
+- **Subtask:** Restyle headline and discovery frames with slide macros
+  - **Intention:** Restyle headline and discovery frames with slide macros
+  - **Code Changes Snippet:**
+    ```
+    diff --git a/slides/content/part1_problem_of_mass.tex b/slides/content/part1_problem_of_mass.tex
+    index e769491..b8606ef 100644
+    --- a/slides/content/part1_problem_of_mass.tex
+    +++ b/slides/content/part1_problem_of_mass.tex
+    @@ -1,8 +1,7 @@
+     \begin{frame}{Why is mass a problem?}
+    -  \centering
+    -  Gauge theories prefer massless fields.
+    -  Yet nature gives $W$, $Z$, and fermions mass.
+    -  Where does mass fit without breaking symmetry?
+    +  \slidephrase{Gauge theories love massless fields.}
+    +  \slidesubphrase{But nature is full of massive particles.}
+    +  \slidesubphrase{Naive mass terms seem to break our symmetries.}
+     \end{frame}
+    ```
+  - **Commit Message:** `b69c7be7ef52525819b7c1d1f8c34af3869169bd` Restyle headline and discovery frames with slide macros
+
+- **Subtask:** Add reusable slide layout macros
+  - **Intention:** Add reusable slide layout macros
+  - **Code Changes Snippet:**
+    ```
+    diff --git a/slides/main.tex b/slides/main.tex
+    index 25dccc8..df392cf 100644
+    --- a/slides/main.tex
+    +++ b/slides/main.tex
+    @@ -20,6 +20,57 @@
+     % --------------------------------
+     %        DOCUMENT
+     % --------------------------------
+    +
+    +%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    +% Higgs seminar slide layout macros
+    +%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    +
+    +% Vertical gap macro for consistent rhythm
+    ```
+  - **Commit Message:** `57d2d55f10d85bb325c78b7c0c95de9df1a36674` Add reusable slide layout macros
+
+
+## Section: notes
+
+- **Subtask:** Add speaker-ready seminar script
+  - **Intention:** Add speaker-ready seminar script
+  - **Code Changes Snippet:**
+    ```
+    diff --git a/notes/outline.md b/notes/outline.md
+    index e69de29..4312952 100644
+    --- a/notes/outline.md
+    +++ b/notes/outline.md
+    @@ -0,0 +1,212 @@
+    +# The Higgs Mechanism and the Origin of Mass
+    +
+    +Target duration ~12–13 minutes for a physics-savvy audience (advanced undergraduates or researchers) to trace the mass problem through the Higgs mechanism and its experimental confirmation.
+    +
+    +## High-Level Story Spine
+    +- Open with the puzzle of why particles are not all massless despite relativistic expectations.
+    +- Show that gauge symmetry forbids naive mass terms, creating tension with observed massive particles.
+    +- Introduce spontaneous symmetry breaking with a scalar potential as a way to hide symmetry without breaking the laws.
+    +- Present the Higgs field as the electroweak solution that gives gauge bosons and fermions mass while preserving gauge invariance.
+    ```
+  - **Commit Message:** `f15762e557d473a357672916af2b973c0003f880` Add speaker-ready seminar script

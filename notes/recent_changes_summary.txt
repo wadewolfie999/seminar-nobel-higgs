@@ -1,0 +1,39 @@
+Recent repository changes (last ~50 commits)
+-------------------------------------------
+
+Equation emphasis and bibliography trim
+- 689b89c Document recent repository changes: captured the previous 10-commit summary and pruned bibliography alerts/equations for clarity.
+
+Narrative flow polish
+- bf4c1ee Merge PR #15 and fab762a Enhance narrative flow of Higgs seminar: rephrased discovery/phenomenology storyline, tightened title and closing slides to make the talk read linearly.
+
+Section dividers and layout refinements
+- 008af4c Merge PR #14, 3fa7e8e Add section dividers and refine slide layouts, and d8eee7d Fix minor text-width issue: added divider frames, harmonized layout spacing, and corrected discovery slide widths.
+
+Reusable layout macros
+- e3a6ab9 Merge PR #13, b69c7be Restyle headline and discovery frames with slide macros, 3d5e5a9 Merge PR #12, and 57d2d55 Add reusable slide layout macros: introduced layout helpers in main.tex and applied them across problem, symmetry, Higgs, discovery, and phenomenology frames for consistent styling.
+
+Seminar outline and speaking script
+- 3615efe Merge PR #11, f15762e Add speaker-ready seminar script, d40c23b Merge PR #10, and c653428 Add structured seminar outline with timings: added a Markdown outline with timing cues and a presenter script to accompany the slides.
+
+Phenomenology and transition rewrites
+- 142136e Merge PR #9, 820b940 Update discovery and phenomenology frames, 4e397bd Merge PR #8, and d53d5c2 Refine transition messaging across Higgs seminar parts: clarified phenomenology content, refined transition copy, and updated discovery framing for better flow.
+
+Higgs phenomenology overhaul
+- e639995 Merge PR #7 and 666ac40 Rewrite Higgs phenomenology section: rebuilt the phenomenology section to emphasize key signatures and experimental context.
+
+Higgs field section rewrite
+- fb74ce9 Merge PR #6 and 9a50e34 Rewrite Higgs field section: rewrote Part 3 content to simplify Higgs field explanations and align visuals with the narrative.
+
+Symmetry breaking rewrite
+- 208ef5e Merge PR #5 and ff0c74a Rewrite symmetry breaking slides: overhauled Part 2 to clarify spontaneous symmetry breaking and streamline equation use.
+
+Part 1 mass problem updates
+- af801d4 Merge PR #4, c776bd6 Rewrite mass problem slides, and 7275c77 Renamed part1_problem.tex to part1_problem_of_mass.tex: refreshed the introduction on the mass problem and standardized file naming.
+
+Discovery narrative refinements
+- e80e420 Adjusted discovery slide widths to improve readability.
+- 668a7e3 Merge PR #3, b0f97a4 Merge main into discovery flow branch, 1d951cd Clean discovery slides and remove unicode bullets, 43a11ab Merge PR #2, 537b155 Merge main into discovery flow branch, 40b3d0d Update ATLAS discovery slide caption, 3e6122a Merge PR #1, and 939483e Rework discovery narrative: progressively reshaped the discovery section to clarify captions, bullets, and storyline pacing.
+
+Initial import
+- 11f78ab Upload localspace work and 2c3a897 Initial commit: initial repository creation and slide import.
