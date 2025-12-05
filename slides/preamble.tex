@@ -129,16 +129,19 @@
 % -------------------------------
 \defbeamertemplate*{title page}{custom}{
   \begin{centering}
-    \vspace{2cm}
+    \vspace{1.6cm}
+    {\color{myblue}\rule{0.7\paperwidth}{0.5pt} \par}
+    \vspace{0.6cm}
     {\Huge\bfseries \inserttitle \par}
-    \vspace{0.4cm}
+    \vspace{0.25cm}
     {\large \insertsubtitle \par}
-    \vspace{0.7cm}
+    \vspace{0.55cm}
     {\normalsize \insertauthor \par}
-    \vspace{0.3cm}
     {\small \insertinstitute \par}
-    \vspace{0.3cm}
-    {\small \insertdate \par}
+    \vspace{0.35cm}
+    {\scriptsize \insertdate \par}
+    \vspace{0.45cm}
+    {\color{myblue}\rule{0.7\paperwidth}{0.5pt} \par}
   \end{centering}
 }
 \setbeamertemplate{title page}[custom]

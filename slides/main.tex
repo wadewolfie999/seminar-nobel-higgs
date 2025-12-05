@@ -52,12 +52,12 @@
 }
 
 % Standardized figure block (e.g. discovery plots)
-\newcommand{\slidefigure}[2][0.8]{%
-  \par\slidegap
+\newcommand{\slidefigure}[2][0.86]{%
+  \par\vspace{0.5em}
   \begin{center}
     \includegraphics[width=#1\linewidth]{#2}
   \end{center}
-  \par
+  \vspace{0.7em}\par
 }
 
 % Two-line “tension” structure: statement + consequence
@@ -68,6 +68,23 @@
     \normalsize #2
   \end{center}
   \slidegap\par
+}
+
+% Section divider frame with subtle guides
+\newcommand{\sectiondivider}[2]{%
+  \begin{frame}[plain]
+    \centering
+    \vfill
+    \begin{tikzpicture}[line cap=round]
+      \draw[gray!45, line width=0.6pt] (-0.55\paperwidth,0.7) -- (0.55\paperwidth,0.7);
+      \draw[gray!45, line width=0.6pt] (-0.55\paperwidth,-0.7) -- (0.55\paperwidth,-0.7);
+      \fill[gray!10, rounded corners=3pt] (-0.4\paperwidth,-0.38) rectangle (0.4\paperwidth,0.38);
+      \draw[myblue, line width=0.7pt, rounded corners=3pt] (-0.4\paperwidth,-0.38) rectangle (0.4\paperwidth,0.38);
+      \node[align=center] at (0,0.12) {\Large\bfseries #1};
+      \node[align=center,color=gray!70] at (0,-0.18) {\small #2};
+    \end{tikzpicture}
+    \vfill
+  \end{frame}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
