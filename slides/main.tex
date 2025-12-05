@@ -26,12 +26,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Vertical gap macro for consistent rhythm
-\newcommand{\slidegap}{\vspace{0.7em}}
+\newcommand{\slidegap}{\vspace{0.6em plus 0.25em minus 0.2em}}
 
 % Single centered phrase, tuned for minimal-text slides
 \newcommand{\slidephrase}[1]{%
   \par\slidegap
-  \begin{center}\Large #1\end{center}%
+  \begin{center}\large #1\end{center}%
   \slidegap\par
 }
 
@@ -45,26 +45,28 @@
 % Equation block with symmetric spacing
 \newcommand{\slideeq}[1]{%
   \par\slidegap
-  \[
-    #1
-  \]
+  {\setlength{\abovedisplayskip}{6pt plus 3pt minus 2pt}%
+   \setlength{\belowdisplayskip}{6pt plus 3pt minus 2pt}%
+   \[
+     #1
+   \]}
   \slidegap\par
 }
 
 % Standardized figure block (e.g. discovery plots)
-\newcommand{\slidefigure}[2][0.86]{%
-  \par\vspace{0.5em}
+\newcommand{\slidefigure}[2][0.82]{%
+  \par\vspace{0.35em plus 0.25em minus 0.15em}
   \begin{center}
     \includegraphics[width=#1\linewidth]{#2}
   \end{center}
-  \vspace{0.7em}\par
+  \vspace{0.5em plus 0.3em minus 0.2em}\par
 }
 
 % Two-line “tension” structure: statement + consequence
 \newcommand{\slidetension}[2]{%
   \par\slidegap
   \begin{center}
-    \Large #1\\[0.9em]
+    \large #1\\[0.65em]
     \normalsize #2
   \end{center}
   \slidegap\par
